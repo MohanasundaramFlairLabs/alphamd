@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "922286526975",
+    "project_id": "alpha-md-design-jr2t6t",
+    "storage_bucket": "alpha-md-design-jr2t6t.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922286526975:android:dee0b29a7d74f5d72917ca",
+        "android_client_info": {
+          "package_name": "com.mycompany.alphamddesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922286526975-46kvm5q1oium1bs1qcn1ggdf4m57mf27.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.alphamddesign",
+            "certificate_hash": "45fc52a437384777ec5bd282ccfdc99649af4f28"
+          }
+        },
+        {
+          "client_id": "922286526975-rj6ebsmh96buggukp6l29imrhgesj297.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.alphamddesign",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "922286526975-lhh78q0kuumnvqk3l026p33ajc7rj78u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmJzOSGC7_r1_xEiyjYcOzElhzQqlgv3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922286526975-lhh78q0kuumnvqk3l026p33ajc7rj78u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "922286526975-v2q87l7m1samgn9i1m1oh5q8j1nusr82.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.alphamddesign"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
