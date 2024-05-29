@@ -70,18 +70,20 @@ class AppStateNotifier extends ChangeNotifier {
   }
 }
 
-GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
+GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
+    GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const NavBarPage() : const LoginWidget(),
+          appStateNotifier.loggedIn ? entryPage ?? const NavBarPage() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const NavBarPage() : const LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? entryPage ?? const NavBarPage()
+              : const LoginWidget(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -96,13 +98,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'VitalsPage')
               : const VitalsPageWidget(),
-        ),
-        FFRoute(
-          name: 'TestPage',
-          path: '/testPage',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'TestPage')
-              : const TestPageWidget(),
         ),
         FFRoute(
           name: 'EduPage',
@@ -129,14 +124,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const WebviewWidget(),
         ),
         FFRoute(
-          name: 'WeightPage',
+          name: 'AddMedication',
           path: '/WeightPage',
-          builder: (context, params) => const WeightPageWidget(),
+          builder: (context, params) => const AddMedicationWidget(),
         ),
         FFRoute(
-          name: 'login',
+          name: 'Login',
           path: '/login',
           builder: (context, params) => const LoginWidget(),
+        ),
+        FFRoute(
+          name: 'SetTarget',
+          path: '/setTarget',
+          builder: (context, params) => const SetTargetWidget(),
+        ),
+        FFRoute(
+          name: 'MedicationPage',
+          path: '/medicationPage',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'MedicationPage')
+              : const MedicationPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

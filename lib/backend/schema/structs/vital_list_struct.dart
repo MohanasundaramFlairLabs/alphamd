@@ -11,14 +11,14 @@ import '/flutter_flow/flutter_flow_util.dart';
 class VitalListStruct extends FFFirebaseStruct {
   VitalListStruct({
     String? vitalType,
-    double? vitalValue,
     DateTime? vitalDate,
     String? vitalNote,
+    int? vitalValue,
     FirestoreUtilData firestoreUtilData = const FirestoreUtilData(),
   })  : _vitalType = vitalType,
-        _vitalValue = vitalValue,
         _vitalDate = vitalDate,
         _vitalNote = vitalNote,
+        _vitalValue = vitalValue,
         super(firestoreUtilData);
 
   // "vitalType" field.
@@ -26,13 +26,6 @@ class VitalListStruct extends FFFirebaseStruct {
   String get vitalType => _vitalType ?? '';
   set vitalType(String? val) => _vitalType = val;
   bool hasVitalType() => _vitalType != null;
-
-  // "vitalValue" field.
-  double? _vitalValue;
-  double get vitalValue => _vitalValue ?? 0.0;
-  set vitalValue(double? val) => _vitalValue = val;
-  void incrementVitalValue(double amount) => _vitalValue = vitalValue + amount;
-  bool hasVitalValue() => _vitalValue != null;
 
   // "VitalDate" field.
   DateTime? _vitalDate;
@@ -46,11 +39,18 @@ class VitalListStruct extends FFFirebaseStruct {
   set vitalNote(String? val) => _vitalNote = val;
   bool hasVitalNote() => _vitalNote != null;
 
+  // "vitalValue" field.
+  int? _vitalValue;
+  int get vitalValue => _vitalValue ?? 0;
+  set vitalValue(int? val) => _vitalValue = val;
+  void incrementVitalValue(int amount) => _vitalValue = vitalValue + amount;
+  bool hasVitalValue() => _vitalValue != null;
+
   static VitalListStruct fromMap(Map<String, dynamic> data) => VitalListStruct(
         vitalType: data['vitalType'] as String?,
-        vitalValue: castToType<double>(data['vitalValue']),
         vitalDate: data['VitalDate'] as DateTime?,
         vitalNote: data['vitalNote'] as String?,
+        vitalValue: castToType<int>(data['vitalValue']),
       );
 
   static VitalListStruct? maybeFromMap(dynamic data) => data is Map
@@ -59,9 +59,9 @@ class VitalListStruct extends FFFirebaseStruct {
 
   Map<String, dynamic> toMap() => {
         'vitalType': _vitalType,
-        'vitalValue': _vitalValue,
         'VitalDate': _vitalDate,
         'vitalNote': _vitalNote,
+        'vitalValue': _vitalValue,
       }.withoutNulls;
 
   @override
@@ -69,10 +69,6 @@ class VitalListStruct extends FFFirebaseStruct {
         'vitalType': serializeParam(
           _vitalType,
           ParamType.String,
-        ),
-        'vitalValue': serializeParam(
-          _vitalValue,
-          ParamType.double,
         ),
         'VitalDate': serializeParam(
           _vitalDate,
@@ -82,6 +78,10 @@ class VitalListStruct extends FFFirebaseStruct {
           _vitalNote,
           ParamType.String,
         ),
+        'vitalValue': serializeParam(
+          _vitalValue,
+          ParamType.int,
+        ),
       }.withoutNulls;
 
   static VitalListStruct fromSerializableMap(Map<String, dynamic> data) =>
@@ -89,11 +89,6 @@ class VitalListStruct extends FFFirebaseStruct {
         vitalType: deserializeParam(
           data['vitalType'],
           ParamType.String,
-          false,
-        ),
-        vitalValue: deserializeParam(
-          data['vitalValue'],
-          ParamType.double,
           false,
         ),
         vitalDate: deserializeParam(
@@ -106,6 +101,11 @@ class VitalListStruct extends FFFirebaseStruct {
           ParamType.String,
           false,
         ),
+        vitalValue: deserializeParam(
+          data['vitalValue'],
+          ParamType.int,
+          false,
+        ),
       );
 
   @override
@@ -115,21 +115,21 @@ class VitalListStruct extends FFFirebaseStruct {
   bool operator ==(Object other) {
     return other is VitalListStruct &&
         vitalType == other.vitalType &&
-        vitalValue == other.vitalValue &&
         vitalDate == other.vitalDate &&
-        vitalNote == other.vitalNote;
+        vitalNote == other.vitalNote &&
+        vitalValue == other.vitalValue;
   }
 
   @override
   int get hashCode =>
-      const ListEquality().hash([vitalType, vitalValue, vitalDate, vitalNote]);
+      const ListEquality().hash([vitalType, vitalDate, vitalNote, vitalValue]);
 }
 
 VitalListStruct createVitalListStruct({
   String? vitalType,
-  double? vitalValue,
   DateTime? vitalDate,
   String? vitalNote,
+  int? vitalValue,
   Map<String, dynamic> fieldValues = const {},
   bool clearUnsetFields = true,
   bool create = false,
@@ -137,9 +137,9 @@ VitalListStruct createVitalListStruct({
 }) =>
     VitalListStruct(
       vitalType: vitalType,
-      vitalValue: vitalValue,
       vitalDate: vitalDate,
       vitalNote: vitalNote,
+      vitalValue: vitalValue,
       firestoreUtilData: FirestoreUtilData(
         clearUnsetFields: clearUnsetFields,
         create: create,

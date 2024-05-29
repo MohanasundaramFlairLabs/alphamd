@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'medication_card_widget_model.dart';
 export 'medication_card_widget_model.dart';
 
@@ -64,9 +65,9 @@ class _MedicationCardWidgetWidgetState
                 color: const Color(0xFFEFF2F5),
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              child: Icon(
+              child: const Icon(
                 FFIcons.kshape,
-                color: FlutterFlowTheme.of(context).secondaryText,
+                color: Color(0xFF242E49),
                 size: 40.0,
               ),
             ),
@@ -86,10 +87,13 @@ class _MedicationCardWidgetWidgetState
                       'Amitriptyline (100mg)',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
                           fontSize: 14.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
                   Text(
@@ -98,10 +102,13 @@ class _MedicationCardWidgetWidgetState
                       '0.5 ml',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
                           color: const Color(0xFF5D6A85),
                           fontSize: 12.0,
                           letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
                 ],
@@ -128,10 +135,13 @@ class _MedicationCardWidgetWidgetState
                       '24 Sept',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
                           color: const Color(0xFF5D6A85),
                           fontSize: 12.0,
                           letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
                 ],

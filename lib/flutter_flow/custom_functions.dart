@@ -15,9 +15,8 @@ import '/auth/firebase_auth/auth_util.dart';
 
 List<dynamic> typeToRender() {
   return [
-    {"type": "file"},
-    {"type": "vital"},
-    {"type": "medication"},
-    // {"type": "file"},
+    {"task": "vital"},
+    {"task": "medication"},
+    {"task": "file"},
   ];
 }

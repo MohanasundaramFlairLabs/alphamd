@@ -2,6 +2,7 @@ import '/components/report_card/report_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'file_component_model.dart';
 export 'file_component_model.dart';
 
@@ -55,9 +56,12 @@ class _FileComponentWidgetState extends State<FileComponentWidget> {
                   Text(
                     'Files (5)',
                     style: FlutterFlowTheme.of(context).titleLarge.override(
-                          fontFamily: 'Outfit',
+                          fontFamily:
+                              FlutterFlowTheme.of(context).titleLargeFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).titleLargeFamily),
                         ),
                   ),
                   Flexible(
@@ -73,11 +77,15 @@ class _FileComponentWidgetState extends State<FileComponentWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
                                   color: const Color(0xFF3894B5),
                                   fontSize: 15.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
                                 ),
                           ),
                           const Flexible(

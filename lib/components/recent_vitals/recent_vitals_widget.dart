@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'recent_vitals_model.dart';
 export 'recent_vitals_model.dart';
 
@@ -84,9 +85,12 @@ class _RecentVitalsWidgetState extends State<RecentVitalsWidget> {
                     widget.vitalName,
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
                           fontSize: 18.0,
                           letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
                 ),
@@ -103,16 +107,22 @@ class _RecentVitalsWidgetState extends State<RecentVitalsWidget> {
                 Text(
                   widget.vitalValue,
                   style: FlutterFlowTheme.of(context).headlineLarge.override(
-                        fontFamily: 'Outfit',
+                        fontFamily:
+                            FlutterFlowTheme.of(context).headlineLargeFamily,
                         fontSize: 48.0,
                         letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).headlineLargeFamily),
                       ),
                 ),
                 Text(
                   widget.vitalUnit,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily:
+                            FlutterFlowTheme.of(context).bodyMediumFamily,
                         letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).bodyMediumFamily),
                       ),
                 ),
               ],

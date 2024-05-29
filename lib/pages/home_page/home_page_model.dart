@@ -8,6 +8,8 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
 
   bool isUserData = true;
 
+  String? userName;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

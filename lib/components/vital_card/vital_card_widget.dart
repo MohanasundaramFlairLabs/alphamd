@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'vital_card_model.dart';
 export 'vital_card_model.dart';
 
@@ -9,7 +10,7 @@ class VitalCardWidget extends StatefulWidget {
     super.key,
     required this.vitalUnit,
     required this.vitalName,
-    required this.vitalIcon,
+    this.vitalIcon,
     required this.vitalDate,
     required this.vitalValue,
     required this.vitalColor,
@@ -85,9 +86,12 @@ class _VitalCardWidgetState extends State<VitalCardWidget> {
                     'Heart Rate',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily:
+                            FlutterFlowTheme.of(context).bodyMediumFamily,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w600,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).bodyMediumFamily),
                       ),
                 ),
                 Row(
@@ -100,10 +104,13 @@ class _VitalCardWidgetState extends State<VitalCardWidget> {
                         '98',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
                             fontSize: 24.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w800,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
                     Padding(
@@ -115,10 +122,14 @@ class _VitalCardWidgetState extends State<VitalCardWidget> {
                           'bpm',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
                               color: const Color(0xFF5D6A85),
                               fontSize: 12.0,
                               letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
                             ),
                       ),
                     ),
@@ -139,10 +150,13 @@ class _VitalCardWidgetState extends State<VitalCardWidget> {
                     '11/10/23',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily:
+                            FlutterFlowTheme.of(context).bodyMediumFamily,
                         color: const Color(0xFF5D6A85),
                         fontSize: 12.0,
                         letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).bodyMediumFamily),
                       ),
                 ),
               ),

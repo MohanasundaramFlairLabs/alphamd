@@ -2,6 +2,7 @@ import '/components/medication_card_widget/medication_card_widget_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'medication_component_model.dart';
 export 'medication_component_model.dart';
 
@@ -56,40 +57,57 @@ class _MedicationComponentWidgetState extends State<MedicationComponentWidget> {
                   Text(
                     'Medications (5)',
                     style: FlutterFlowTheme.of(context).titleLarge.override(
-                          fontFamily: 'Outfit',
+                          fontFamily:
+                              FlutterFlowTheme.of(context).titleLargeFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).titleLargeFamily),
                         ),
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      width: MediaQuery.sizeOf(context).width * 0.18,
-                      decoration: const BoxDecoration(),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            'See All ',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: const Color(0xFF3894B5),
-                                  fontSize: 15.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                          ),
-                          const Flexible(
-                            flex: 1,
-                            child: Icon(
-                              Icons.arrow_forward_ios,
-                              color: Color(0xFF3894B5),
-                              size: 16.0,
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.pushNamed('MedicationPage');
+                      },
+                      child: Container(
+                        width: MediaQuery.sizeOf(context).width * 0.18,
+                        decoration: const BoxDecoration(),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              'See All ',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
+                                    color: const Color(0xFF3894B5),
+                                    fontSize: 15.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
                             ),
-                          ),
-                        ],
+                            const Flexible(
+                              flex: 1,
+                              child: Icon(
+                                Icons.arrow_forward_ios,
+                                color: Color(0xFF3894B5),
+                                size: 16.0,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

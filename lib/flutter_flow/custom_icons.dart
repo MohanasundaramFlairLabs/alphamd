@@ -10,6 +10,7 @@ class FFIcons {
   static const String _happyIconFamily = 'HappyIcon';
   static const String _stepWeightFamily = 'StepWeight';
   static const String _targetFamily = 'Target';
+  static const String _calenderFamily = 'Calender';
 
   // MyHomePageIcons
   static const IconData khome =
@@ -52,4 +53,8 @@ class FFIcons {
 
   // Target
   static const IconData ktarget = IconData(0xe800, fontFamily: _targetFamily);
+
+  // Calender
+  static const IconData kcalender =
+      IconData(0xe800, fontFamily: _calenderFamily);
 }
